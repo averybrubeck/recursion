@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # collatz conjecture
 def collatz(num)
   if num == 1
