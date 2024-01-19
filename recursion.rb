@@ -1,12 +1,12 @@
-#collatz conjecture
-def collatz(n)
-    if n == 1
-      return 0
-    elsif n.even?
-        p 1 + collatz(n / 2)
-    else
-        p 1 + collatz(n * 3 + 1 )
-    end
+# collatz conjecture
+def collatz(num)
+  if num == 1
+    p 0
+  elsif num.even?
+    p 1 + collatz(num / 2)
+  else
+    p 1 + collatz(num * 3 + 1)
+  end
 end
 
-collatz(50)
+collatz(3)
