@@ -37,4 +37,15 @@ def fib_recursive(num)
   end
 end
 
-fib_recursive(9)
+# fib_recursive(9)
+
+def merge_sort(input)
+  input.each_cons(2) do |n, m|
+    if n < m
+      break
+    end
+  end
+end
+
+my_array = [2, 1, 3, 5, 4]
+merge_sort(my_array)
