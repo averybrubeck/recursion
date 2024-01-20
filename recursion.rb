@@ -40,12 +40,17 @@ end
 # fib_recursive(9)
 
 def merge_sort(input)
-  input.each_cons(2) do |n, m|
-    if n < m
-      break
+  a1 = input.slice(0, input.length / 2)
+  a2 = input[input.length / 2..-1]
+    
+  a1.each_with_index do |e1, i1|
+    a2.each_with_index do |e2, i2|
+
     end
   end
 end
 
 my_array = [2, 1, 3, 5, 4]
-merge_sort(my_array)
+
+
+puts "#{array1}, #{array2}"
