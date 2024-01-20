@@ -11,4 +11,20 @@ def collatz(num)
   end
 end
 
-collatz(3)
+# collatz(3)
+
+def fib(num)
+  a = 0
+  b = 1
+  i = 2
+  p a if num.zero?
+  while i <= num
+    c = a + b
+    a = b
+    b = c
+    i += 1
+  end
+  p b
+end
+
+fib(9)
