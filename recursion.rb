@@ -14,9 +14,7 @@ end
 # collatz(3)
 
 def fib(num)
-  a = 0
-  b = 1
-  i = 2
+  a = 0, b = 1, i = 2
   p a if num.zero?
   while i <= num
     c = a + b
@@ -27,4 +25,16 @@ def fib(num)
   p b
 end
 
-fib(9)
+# fib(9)
+
+def fib_recursive(num)
+  if num.zero?
+    p 0
+  elsif num == 1
+    p 1
+  else
+    fib_recursive(num - 1) + fib_recursive(num - 2)
+  end
+end
+
+fib_recursive(9)
