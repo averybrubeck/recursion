@@ -58,9 +58,9 @@ def merge(left, right)
       sorted << right.shift
     end
   end
-
   p sorted.concat(left).concat(right)
 end
+
 my_array = [2, 1, 3, 5, 4]
 
 merge_sort(my_array)
