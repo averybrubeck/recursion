@@ -40,17 +40,27 @@ end
 # fib_recursive(9)
 
 def merge_sort(input)
-  a1 = input.slice(0, input.length / 2)
-  a2 = input[input.length / 2..-1]
-    
-  a1.each_with_index do |e1, i1|
-    a2.each_with_index do |e2, i2|
+  return input if input.length <= 1
 
-    end
-  end
+  middle = input.length / 2
+  left = input[0...middle]
+  right = input[middle..-1]
+
+  merge(merge_sort(left), merge_sort(right))
 end
 
+def merge(left, right)
+  sorted = []
+  until left.empty? || right.empty?
+    if left.first <= right.first
+      sorted << left.shift
+    else
+      sorted << right.shift
+    end
+  end
+
+  p sorted.concat(left).concat(right)
+end
 my_array = [2, 1, 3, 5, 4]
 
-
-puts "#{array1}, #{array2}"
+merge_sort(my_array)
